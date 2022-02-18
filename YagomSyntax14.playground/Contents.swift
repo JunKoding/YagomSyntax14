@@ -34,14 +34,14 @@ print(day)
 
 switch day {
 case .mon, .tue, .wed, .thu:
-    print("평일입니다.")
+    print("평일.")
 case Weekday.fri:
-    print("불금 파티!!")
+    print("불금.")
 case .sat, .sun:
-    print("신나는 주말!!")
+    print("주말")
 }
 // 이 중에 하나라도 case를 빼먹으면 default값 설정해야 한다.
-// 평일입니다.
+// 평일.
 
 
 
@@ -94,12 +94,12 @@ let apple: Fruit? = Fruit(rawValue: 0)
 // 값이 없을 수도 있기 때문에 옵셔널 타입으로 정의한다.
 
 if let orange: Fruit = Fruit(rawValue: 5) {
-    print("rawValue 5에 해당하는 case는 \(orange)입니다.")
+    print("rawValue 5에 해당하는 case는 \(orange)이다.")
 } else {
-    print("rawValue 5에 해당하는 case는 없습니다.")
+    print("rawValue 5에 해당하는 case는 없다.")
 }
 // 공부했던 if let으로 옵셔널 값을 꺼낸다.
-// rawValue 5에 해당하는 case는 없습니다.
+// rawValue 5에 해당하는 case는 없다.
 
 
 
@@ -116,16 +116,16 @@ enum Month {
     func printMessage() {
         switch self {
         case .mar, .apr, .may:
-            print("따스한 봄~")
+            print("봄")
         case .jun, .jul, .aug:
-            print("더운 여름~")
+            print("여름")
         case .sep, .oct, .nov:
-            print("가을은 독서의 계절!")
+            print("가을")
         case .dec, .jan, .feb:
-            print("추운 겨울~")
+            print("겨울")
         }
     }
 }
 
 Month.mar.printMessage()
-// 따스한 봄~
+// 봄
